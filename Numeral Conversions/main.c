@@ -3,8 +3,6 @@
 #include "DtoO.c"
 #include "DtoH.c"
 #include "BtoD.c"
-//importing all the header files in one main program
-//showing menu for user to choose the option
 
 void showMenu()
 {
@@ -14,7 +12,6 @@ void showMenu()
     printf("Enter 4 for Binary to Decimal Conversion\n");
     printf("Else press any key to Exit\n");
 }
-//getting a character from user to choose the option
 
 char getChoice()
 {
@@ -31,7 +28,7 @@ void seperator()
 {
     printf("\n----------X----------\n");
 }
-//main driver function
+
 void main()
 {
     int num;
@@ -40,7 +37,7 @@ void main()
     {
         showMenu();
         choice = getChoice();
-        if (choice == '1')//calling decimal to binary function
+        if (choice == '1')
         {
             printf("Doing Decimal to Binary Conversion");
             printf("%s", "\nenter decimal number: ");
@@ -50,7 +47,7 @@ void main()
             seperator();
             continue;
         }
-        else if (choice == '2') //calling decimal to octal fucntion
+        else if (choice == '2')
         {
             printf("Doing Decimal to Octal Conversion");
             printf("%s", "\nenter decimal number: ");
@@ -60,7 +57,7 @@ void main()
             seperator();
             continue;
         }
-        else if (choice == '3') // calling decimal to hexadecimal function
+        else if (choice == '3')
         {
             printf("Doing Decimal to Hexadecimal Conversion");
             printf("\nEnter a decimal number: ");
@@ -72,7 +69,7 @@ void main()
         }
         else
         {
-            printf("Doing Binary to Decimal Conversion");//calling binary to decimal function
+            printf("Doing Binary to Decimal Conversion");
             printf("\nEnter a Binary number: ");
             scanf("%d", &num);
             seperator();
