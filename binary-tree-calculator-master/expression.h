@@ -4,12 +4,12 @@
 #include "utils.h"
 
 int infix_to_postfix(char *, char *);
-
+//defining the function to convert infix to postfix
 typedef struct _stack {
   int *array;
   int top;
 } STACK;
-
+//pointer to the top of the stack
 STACK *stack_create(int length)
 {
   STACK *stack = (STACK *) malloc(sizeof(STACK));
@@ -18,22 +18,22 @@ STACK *stack_create(int length)
 
   return stack;
 }
-
+//if the stack is empty
 int stack_is_empty(STACK *stack)
 {
   return stack->top == -1;
 }
-
+//get values for stack
 char stack_get(STACK *stack)
 {
   return stack->array[stack->top];
 }
-
+//push in stack
 void stack_push(STACK *stack, char op)
 {
   stack->array[++stack->top] = op;
 }
-
+//pop in stack
 char stack_pop(STACK *stack)
 {
   if (stack_is_empty(stack)) {
@@ -41,7 +41,7 @@ char stack_pop(STACK *stack)
   }
   return stack->array[stack->top--];
 }
-
+//previous elements of the top 
 int stack_precedence(char ch)
 {
   switch (ch) {
@@ -63,7 +63,7 @@ int stack_precedence(char ch)
       return -1;
   }
 }
-
+//conversion function calling
 int infix_to_postfix(char *infix, char *postfix)
 {
   STACK *stack = stack_create(strlen(infix));

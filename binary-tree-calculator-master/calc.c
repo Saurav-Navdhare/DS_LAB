@@ -23,6 +23,7 @@ int main()
   int i, counter = 0;
   while (true) {
     char infix[MAX_STR], prefix[MAX_STR], postfix[MAX_STR];
+    //entering an expression in infix only
     printf("Type an arithmetic expression ('0' to stop): ");
     gets(infix);
     //if the user types 0, the program stops
