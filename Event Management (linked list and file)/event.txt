@@ -1,0 +1,8 @@
+Name: w
+Date: ì
+Address: 
+Expense: 33
+Organiser: w
+Cheif Guest: w
+Theme: w
+-----X-----
