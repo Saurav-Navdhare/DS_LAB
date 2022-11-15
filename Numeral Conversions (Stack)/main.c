@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "DtoB.c"
 #include "DtoO.c"
 #include "DtoH.c"
@@ -45,6 +46,7 @@ void main()
             seperator();
             DtoB(num);
             seperator();
+            getChoice();
             continue;
         }
         else if (choice == '2')
@@ -55,6 +57,7 @@ void main()
             seperator();
             DtoO(num);
             seperator();
+            getChoice();
             continue;
         }
         else if (choice == '3')
@@ -65,9 +68,10 @@ void main()
             seperator();
             DtoH(num);
             seperator();
+            getChoice();
             continue;
         }
-        else
+        else if(choice == '4')
         {
             printf("Doing Binary to Decimal Conversion");
             printf("\nEnter a Binary number: ");
@@ -75,6 +79,7 @@ void main()
             seperator();
             BtoD(num);
             seperator();
+            getChoice();
             continue;
         }
     }
