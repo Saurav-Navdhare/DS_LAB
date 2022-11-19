@@ -27,7 +27,7 @@ void Password();
 void issuerecord();
 void loaderanim();
 
-// list of global files that can be acceed form anywhere in program
+// list of global files that can be acccoessed form anywhere in program
 FILE *fp, *ft, *fs;
 COORD coord = {0, 0};
 // list of global variable
@@ -117,7 +117,7 @@ void mainmenu(){
               gotoxy(16, 5);
               printf("\tis brought to you by");
               gotoxy(16, 7);
-              printf("\tCode with C Team");
+              printf("\tTeam 2 G5");
               gotoxy(16, 8);
               printf("******************************************");
               gotoxy(16, 10);
@@ -794,9 +794,7 @@ void Password(void){ // for password option
        printf("Enter Password:");
        while (ch != 13){
               ch = getch();
-
-              if (ch != 13 && ch != 8)
-              {
+              if (ch != 13 && ch != 8){
                      putch('*');
                      pass[i] = ch;
                      i++;
@@ -804,9 +802,7 @@ void Password(void){ // for password option
        }
        pass[i] = '\0';
        if (strcmp(pass, password) == 0){
-
               gotoxy(15, 9);
-              // textcolor(BLINK);
               printf("Password match");
               gotoxy(17, 10);
               printf("Press any key to countinue.....");
@@ -820,8 +816,7 @@ void Password(void){ // for password option
               Password();
        }
 }
-void issuerecord() // display issued book's information
-{
+void issuerecord(){ // display issued book's information
        system("cls");
        gotoxy(10, 8);
        printf("The Book has taken by Mr. %s", a.stname);
